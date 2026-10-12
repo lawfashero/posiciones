@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica de posiciones - CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            height: 2500px; /* Altura grande para probar el scroll y el sticky/fixed */
+        }
+
+        h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+
+        /* Contenedores generales para las demos */
+        .container {
+            position: relative;
+            background: lightgray;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            height: 300px;
+            border: 1px solid #999;
+        }
+
+        .box-orange {
+            background: orange;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box-blue {
+            background: lightskyblue;
+            width: 100px;
+            height: 100px;
+        }
+
+        /* 1. STATIC */
+        .static-demo .box-orange {
+            /* Sin ninguna declaración position (por defecto es static)[cite: 2] */
+        }
+        .static-demo .box-blue {
+            position: static; /* Declarado como estático[cite: 2] */
+        }
+
+        /* 2. RELATIVE */
+        .relative-demo .box-orange {
+            position: relative; /* Movido relativo a su posición normal[cite: 3] */
+            top: 50px;
+            left: 50px;
+        }
+
+        /* 3. ABSOLUTE */
+        .absolute-demo .box-orange {
+            position: absolute; /* Relativo al padre con position non-static[cite: 5] */
+            right: 10px;
+            top: 10px;
+        }
+
+        /* 4. FIXED */
+        .fixed-demo .box-orange {
+            position: fixed; /* Relativo al documento HTML y fijo ante el scroll[cite: 6] */
+            right: 10px;
+            top: 10px;
+        }
+
+        /* 5. STICKY */
+        .sticky-box {
+            position: sticky; /* Mezcla entre relative y fixed[cite: 7] */
+            top: 0;
+            background: red;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Práctica de Posiciones en CSS</h1>
+    <p>Ejemplos basados en la guía de posicionamiento.</p>
+
+    <!-- 1. STATIC -->
+    <h2>1. Static (Por defecto)</h2>
+    <div class="container static-demo">
+        <div class="box-orange"></div>
+        <div class="box-blue"></div>
+    </div>
+
+    <!-- 2. RELATIVE -->
+    <h2>2. Relative</h2>
+    <div class="container relative-demo">
+        <div class="box-orange"></div>
+        <div class="box-blue"></div>
+    </div>
+
+    <!-- 3. ABSOLUTE -->
+    <h2>3. Absolute</h2>
+    <div class="container absolute-demo">
+        <div class="box-orange"></div>
+        <div class="box-blue"></div>
+    </div>
+
+    <!-- 4. FIXED -->
+    <h2>4. Fixed (Mira la esquina superior derecha de tu pantalla)</h2>
+    <div class="container fixed-demo">
+        <div class="box-orange"></div>
+        <div class="box-blue"></div>
+        <p style="text-align: center; padding-top: 120px;">Elemento con posición fija flotando respecto a la ventana.</p>
+    </div>
+
+    <!-- 5. STICKY -->
+    <h2>5. Sticky (Desplaza hacia abajo para ver el efecto)</h2>
+    <div class="container" style="height: 600px;">
+        <div class="sticky-box">¡Soy un elemento sticky y me quedo arriba al hacer scroll!</div>
+        <p style="text-align: center; margin-top: 50px;">Sigue desplazando...</p>
+    </div>
+
+</body>
+</html>

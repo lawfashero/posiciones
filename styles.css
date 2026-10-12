@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* --- Banner Superior (Goku) --- */
+.header-banner {
+    width: 100%;
+    height: 220px;
+    background-color: #111;
+    overflow: hidden;
+}
+
+.header-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Menú de Navegación --- */
+nav {
+    background-color: #3b1111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    padding: 0 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: #5a1a1a;
+}
+
+/* Desplegable de Segunda Parcial */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #3b1111;
+    list-style: none;
+    min-width: 200px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+}
+
+.submenu a {
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* --- Contenedores Generales --- */
+.main-content {
+    padding: 60px 20px;
+    text-align: center;
+    min-height: 350px;
+}
+
+.task-content {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container {
+    position: relative;
+    background: #e2e2e2;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    height: 300px;
+    border: 1px solid #999;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.box-orange {
+    background: orange;
+    width: 100px;
+    height: 100px;
+}
+
+.box-blue {
+    background: lightskyblue;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Clases de posiciones para la tarea */
+.relative-demo {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.absolute-demo {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+.fixed-demo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2980b9;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+/* --- Pie de Página (Universidad de Colima) --- */
+footer {
+    background-color: #222;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.footer-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-info p {
+    margin: 2px 0;
+    font-size: 14px;
+}
